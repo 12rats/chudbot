@@ -1,0 +1,131 @@
+{
+	"objName": "Stage",
+	"scripts": [[5,
+			94,
+			[["whenGreenFlag"],
+				["doForever", [["playSound:", "pop"], ["wait:elapsed:from:", ["randomFrom:to:", 1, 4]]]]]]],
+	"sounds": [{
+			"soundName": "pop",
+			"soundID": -1,
+			"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+			"sampleCount": 258,
+			"rate": 11025,
+			"format": ""
+		}],
+	"costumes": [{
+			"costumeName": "backdrop1",
+			"baseLayerID": -1,
+			"baseLayerMD5": "b61b1077b0ea1931abee9dbbfa7903ff.png",
+			"bitmapResolution": 2,
+			"rotationCenterX": 480,
+			"rotationCenterY": 360
+		},
+		{
+			"costumeName": "underwater3",
+			"baseLayerID": -1,
+			"baseLayerMD5": "e84e7d633c3914282219923ad8c28be1.png",
+			"bitmapResolution": 2,
+			"rotationCenterX": 480,
+			"rotationCenterY": 360
+		}],
+	"currentCostumeIndex": 1,
+	"penLayerMD5": "5c81a336fab8be57adc039a8a2b33ca9.png",
+	"penLayerID": -1,
+	"tempoBPM": 60,
+	"videoAlpha": 0.5,
+	"children": [{
+			"objName": "Dragon",
+			"scripts": [[11,
+					127,
+					[["whenGreenFlag"], ["doForever", [["pointTowards:", "Octopus"], ["forward:", 2]]]]],
+				[5,
+					313,
+					[["whenGreenFlag"],
+						["doForever",
+							[["doIfElse", ["touching:", "Octopus"], [["lookLike:", "dragon-fire"]], [["lookLike:", "dragon-normal"]]]]]]],
+				[11, 527, [["whenGreenFlag"], ["gotoX:y:", -240, -180]]]],
+			"costumes": [{
+					"costumeName": "dragon-normal",
+					"baseLayerID": -1,
+					"baseLayerMD5": "ee0082b436d6d5dc3de33047166e7bf2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 65,
+					"rotationCenterY": 60
+				},
+				{
+					"costumeName": "dragon-fire",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bb58ce36997fa205a86a085f202837fd.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 84,
+					"rotationCenterY": 56
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 135.62469015831562,
+			"scratchY": 93.6403916014363,
+			"scale": 0.75,
+			"direction": 48.12420009192056,
+			"rotationStyle": "leftRight",
+			"isDraggable": false,
+			"indexInLibrary": 2,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Octopus",
+			"scripts": [[10,
+					10,
+					[["whenGreenFlag"],
+						["doForever",
+							[["pointTowards:", "_mouse_"],
+								["doIf", ["not", ["touching:", "_mouse_"]], [["forward:", 10]]]]]]],
+				[10,
+					186,
+					[["whenGreenFlag"],
+						["doForever", [["doIf", ["touching:", "Dragon"], [["say:duration:elapsed:from:", "You got me!", 2]]]]]]],
+				[10,
+					335,
+					[["whenGreenFlag"],
+						["doForever",
+							[["doIfElse", ["touching:", "Dragon"], [["lookLike:", "octopus-burnt"]], [["lookLike:", "octopus-normal"]]]]]]],
+				[10, 527, [["whenGreenFlag"], ["gotoX:y:", 180, 175]]]],
+			"costumes": [{
+					"costumeName": "octopus-normal",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bb68d2e29d8572ef9de06f8033e668d9.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 75,
+					"rotationCenterY": 75
+				},
+				{
+					"costumeName": "octopus-burnt",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bba3d220f41fcc34e1688674c5461bf5.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 72,
+					"rotationCenterY": 181
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 206.00481302101102,
+			"scratchY": 156.73522650525172,
+			"scale": 0.65,
+			"direction": 31.029486885416077,
+			"rotationStyle": "leftRight",
+			"isDraggable": false,
+			"indexInLibrary": 1,
+			"visible": true,
+			"spriteInfo": {
+			}
+		}],
+	"info": {
+		"videoOn": false,
+		"userAgent": "Mozilla\/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/46.0.2490.86 Safari\/537.36",
+		"projectID": "100000076",
+		"scriptCount": 8,
+		"swfVersion": "v444",
+		"flashVersion": "WIN 20,0,0,286",
+		"spriteCount": 2,
+		"hasCloudData": false
+	}
+}

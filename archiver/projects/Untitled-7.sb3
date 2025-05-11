@@ -1,0 +1,769 @@
+{
+	"objName": "Stage",
+	"variables": [{
+			"name": "sekundy",
+			"value": 26,
+			"isPersistent": false
+		},
+		{
+			"name": "setne sekundy",
+			"value": 30,
+			"isPersistent": false
+		},
+		{
+			"name": "licznik odbić",
+			"value": 16,
+			"isPersistent": false
+		},
+		{
+			"name": "zbite",
+			"value": 36,
+			"isPersistent": false
+		}],
+	"lists": [{
+			"listName": "1000",
+			"contents": ["", ""],
+			"isPersistent": false,
+			"x": 231,
+			"y": 333,
+			"width": 116,
+			"height": 216,
+			"visible": false
+		}],
+	"sounds": [{
+			"soundName": "pop",
+			"soundID": -1,
+			"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+			"sampleCount": 258,
+			"rate": 11025,
+			"format": ""
+		}],
+	"costumes": [{
+			"costumeName": "backdrop1",
+			"baseLayerID": -1,
+			"baseLayerMD5": "739b5e2a2435f6e1ec2993791b423146.png",
+			"bitmapResolution": 1,
+			"rotationCenterX": 240,
+			"rotationCenterY": 180
+		}],
+	"currentCostumeIndex": 0,
+	"penLayerMD5": "ded8eb98e5394bf8e2b73560597d6419.png",
+	"penLayerID": -1,
+	"tempoBPM": 60,
+	"videoAlpha": 0.5,
+	"children": [{
+			"objName": "prawo",
+			"scripts": [[48,
+					13,
+					[["whenGreenFlag"],
+						["setVar:to:", "sekundy", 0],
+						["setVar:to:", "setne sekundy", 0],
+						["gotoX:y:", -240, -172],
+						["clearPenTrails"],
+						["penSize:", 4],
+						["penColor:", 11872310],
+						["putPenDown"],
+						["doRepeat", 30, [["forward:", 100], ["bounceOffEdge"]]],
+						["doForever",
+							[["doIfElse",
+									["touchingColor:", -15820180],
+									[["forward:", 10]],
+									[["changeVar:by:", "sekundy", 1], ["wait:elapsed:from:", 1]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "kostium1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "445e3a158340cdb7b665c685dc0baa53.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 2,
+					"rotationCenterY": 5
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -162,
+			"scratchY": -172,
+			"scale": 1,
+			"direction": -90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 3,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Duszek1",
+			"scripts": [[16,
+					7,
+					[["whenGreenFlag"], ["doForever", [["setVar:to:", "setne sekundy", 0], ["wait:elapsed:from:", 1]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "kostium1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "d36f6603ec293d2c2198d3ea05109fe0.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 0,
+					"rotationCenterY": 0
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -35,
+			"scratchY": -1,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 5,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "lewo",
+			"scripts": [[23,
+					20,
+					[["whenGreenFlag"],
+						["gotoX:y:", -238, 151],
+						["clearPenTrails"],
+						["putPenDown"],
+						["penColor:", -15820180],
+						["penSize:", 4],
+						["doRepeat", 10, [["forward:", 100], ["bounceOffEdge"]]],
+						["putPenUp"],
+						["doForever", [["changeVar:by:", "setne sekundy", 10], ["wait:elapsed:from:", 0.06]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "lewo ",
+					"baseLayerID": -1,
+					"baseLayerMD5": "afce058dfb2a6a1fa6747c90f14cbfee.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 2,
+					"rotationCenterY": 3
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -162,
+			"scratchY": 151,
+			"scale": 1,
+			"direction": -90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 4,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"target": "Stage",
+			"cmd": "getVar:",
+			"param": "licznik odbić",
+			"color": 15629590,
+			"label": "licznik odbić",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 2,
+			"y": 0,
+			"visible": true
+		},
+		{
+			"target": "Stage",
+			"cmd": "getVar:",
+			"param": "sekundy",
+			"color": 15629590,
+			"label": "sekundy",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 122,
+			"y": -1,
+			"visible": true
+		},
+		{
+			"target": "Stage",
+			"cmd": "getVar:",
+			"param": "setne sekundy",
+			"color": 15629590,
+			"label": "setne sekundy",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 229,
+			"y": -1,
+			"visible": true
+		},
+		{
+			"objName": "decha do prasowania",
+			"scripts": [[20,
+					10,
+					[["whenGreenFlag"],
+						["setVar:to:", "licznik odbić", 0],
+						["gotoX:y:", -204, -152],
+						["doForever", [["xpos:", ["mouseX"]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "decha  do prasowania",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bf6d716ed59e580797140071df3292dc.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 61,
+					"rotationCenterY": 52
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 231,
+			"scratchY": -152,
+			"scale": 1,
+			"direction": -118.06654991203558,
+			"rotationStyle": "leftRight",
+			"isDraggable": false,
+			"indexInLibrary": 1,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Balloon1",
+			"scripts": [[52,
+					9,
+					[["whenGreenFlag"],
+						["setVar:to:", "zbite", 0],
+						["show"],
+						["doForever",
+							[["doIf",
+									["touching:", "jojeczko"],
+									[["changeVar:by:", "zbite", 1], ["hide"], ["wait:elapsed:from:", 3], ["show"]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "balloon1-a",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bc96a1fb5fe794377acd44807e421ce2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 32,
+					"rotationCenterY": 94
+				},
+				{
+					"costumeName": "balloon1-b",
+					"baseLayerID": -1,
+					"baseLayerMD5": "d7bb51d9c38af6314bd2b4058d2a592d.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 31,
+					"rotationCenterY": 94
+				},
+				{
+					"costumeName": "kostium1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "3b168eae27d591c0a4787f816ea746d7.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 56,
+					"rotationCenterY": 138
+				},
+				{
+					"costumeName": "balloon1-c",
+					"baseLayerID": -1,
+					"baseLayerMD5": "5538d7fe6f91a40cb7528d4eed415590.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 40,
+					"rotationCenterY": 74
+				}],
+			"currentCostumeIndex": 3,
+			"scratchX": -202,
+			"scratchY": 101,
+			"scale": 0.35000000000000014,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 6,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Balloon2",
+			"scripts": [[52,
+					9,
+					[["whenGreenFlag"],
+						["setVar:to:", "zbite", 0],
+						["show"],
+						["doForever",
+							[["doIf",
+									["touching:", "jojeczko"],
+									[["changeVar:by:", "zbite", 1], ["hide"], ["wait:elapsed:from:", 3], ["show"]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "balloon1-a",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bc96a1fb5fe794377acd44807e421ce2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 32,
+					"rotationCenterY": 94
+				},
+				{
+					"costumeName": "balloon1-b",
+					"baseLayerID": -1,
+					"baseLayerMD5": "d7bb51d9c38af6314bd2b4058d2a592d.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 31,
+					"rotationCenterY": 94
+				},
+				{
+					"costumeName": "kostium1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "3b168eae27d591c0a4787f816ea746d7.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 56,
+					"rotationCenterY": 138
+				},
+				{
+					"costumeName": "balloon1-c",
+					"baseLayerID": -1,
+					"baseLayerMD5": "5538d7fe6f91a40cb7528d4eed415590.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 40,
+					"rotationCenterY": 74
+				}],
+			"currentCostumeIndex": 3,
+			"scratchX": -95,
+			"scratchY": 31,
+			"scale": 0.35000000000000014,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 7,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Balloon4",
+			"scripts": [[52,
+					9,
+					[["whenGreenFlag"],
+						["setVar:to:", "zbite", 0],
+						["show"],
+						["doForever",
+							[["forward:", 10],
+								["turnRight:", 2],
+								["bounceOffEdge"],
+								["doIf",
+									["touching:", "jojeczko"],
+									[["changeVar:by:", "zbite", 10], ["hide"], ["wait:elapsed:from:", 3], ["show"]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "balloon1-a",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bc96a1fb5fe794377acd44807e421ce2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 32,
+					"rotationCenterY": 94
+				},
+				{
+					"costumeName": "balloon1-b",
+					"baseLayerID": -1,
+					"baseLayerMD5": "d7bb51d9c38af6314bd2b4058d2a592d.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 31,
+					"rotationCenterY": 94
+				},
+				{
+					"costumeName": "kostium1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "3b168eae27d591c0a4787f816ea746d7.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 56,
+					"rotationCenterY": 138
+				},
+				{
+					"costumeName": "balloon1-c",
+					"baseLayerID": -1,
+					"baseLayerMD5": "5538d7fe6f91a40cb7528d4eed415590.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 40,
+					"rotationCenterY": 74
+				}],
+			"currentCostumeIndex": 1,
+			"scratchX": 81.45561581035099,
+			"scratchY": 121.7473944001888,
+			"scale": 0.35000000000000014,
+			"direction": 36.599506691577915,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 9,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "BLOKADA CZASOWA",
+			"scripts": [[67, 177, [["whenGreenFlag"]]],
+				[51, 386, [["wait:elapsed:from:", 60], ["say:", "KONIEC"]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "kostium1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "d36f6603ec293d2c2198d3ea05109fe0.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 0,
+					"rotationCenterY": 0
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -18,
+			"scratchY": 1,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 11,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Duszek2",
+			"scripts": [[50,
+					45,
+					[["whenGreenFlag"],
+						["gotoX:y:", 174, 123],
+						["heading:", 0],
+						["clearPenTrails"],
+						["putPenDown"],
+						["penColor:", 10958572],
+						["penSize:", 2],
+						["forward:", 150],
+						["forward:", -150],
+						["doRepeat", 4, [["forward:", 50], ["wait:elapsed:from:", 0.3], ["turnRight:", 90]]],
+						["putPenUp"],
+						["gotoX:y:", -150, 20]]],
+				[57,
+					462,
+					[["doRepeat", 1, [["forward:", 10], ["wait:elapsed:from:", 0.3], ["turnRight:", 90]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "kostium1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "73c00021ae31621086188f41f92519bb.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 2,
+					"rotationCenterY": 0
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -150,
+			"scratchY": 20,
+			"scale": 1,
+			"direction": 0,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 12,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "speed up",
+			"scripts": [[52,
+					9,
+					[["whenGreenFlag"],
+						["setVar:to:", "zbite", 0],
+						["show"],
+						["doForever",
+							[["doIf",
+									["touching:", "jojeczko"],
+									[["changeVar:by:", "zbite", 100], ["hide"], ["wait:elapsed:from:", 3], ["show"]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "balloon1-a",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bc96a1fb5fe794377acd44807e421ce2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 32,
+					"rotationCenterY": 94
+				},
+				{
+					"costumeName": "balloon1-b",
+					"baseLayerID": -1,
+					"baseLayerMD5": "d7bb51d9c38af6314bd2b4058d2a592d.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 31,
+					"rotationCenterY": 94
+				},
+				{
+					"costumeName": "kostium1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "3b168eae27d591c0a4787f816ea746d7.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 56,
+					"rotationCenterY": 138
+				},
+				{
+					"costumeName": "balloon1-c",
+					"baseLayerID": -1,
+					"baseLayerMD5": "5538d7fe6f91a40cb7528d4eed415590.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 40,
+					"rotationCenterY": 74
+				}],
+			"currentCostumeIndex": 1,
+			"scratchX": 207,
+			"scratchY": 63,
+			"scale": 0.35000000000000014,
+			"direction": -45.45857235284461,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 10,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "jojeczko",
+			"variables": [{
+					"name": "licznik",
+					"value": 0,
+					"isPersistent": false
+				}],
+			"scripts": [[57,
+					15,
+					[["whenGreenFlag"],
+						["gotoX:y:", 0, 134],
+						["heading:", 180],
+						["wait:elapsed:from:", 1],
+						["setVar:to:", "licznik", 0],
+						["doForever",
+							[["forward:", 20],
+								["doIf", ["touching:", "decha do prasowania"], [["turnRight:", ["randomFrom:to:", 160, 240]]]],
+								["bounceOffEdge"],
+								["doIf", ["touchingColor:", -15820180], [["turnLeft:", ["randomFrom:to:", 150, 180]]]],
+								["doIfElse", ["touchingColor:", -4904906], [["setVar:to:", "licznik", 0], ["stopScripts", "this script"]], null],
+								["doIf", ["touching:", "decha do prasowania"], [["changeVar:by:", "licznik odbić", 1]]],
+								["doIf",
+									["touching:", "speed up"],
+									[["gotoX:y:", 190, 108],
+										["doRepeat", 10, [["forward:", 50]]],
+										["doIf", ["touchingColor:", -5818644], [["turnRight:", ["randomFrom:to:", 150, 200]]]]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "ball-a",
+					"baseLayerID": -1,
+					"baseLayerMD5": "10117ddaefa98d819f2b1df93805622f.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 22,
+					"rotationCenterY": 22
+				},
+				{
+					"costumeName": "ball-b",
+					"baseLayerID": -1,
+					"baseLayerMD5": "a8ab44bf8d1210a76ab1916e64aa6cd3.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 11,
+					"rotationCenterY": 11
+				},
+				{
+					"costumeName": "ball-c",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bb45ed5db278f15c17c012c34a6b160f.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 22,
+					"rotationCenterY": 22
+				},
+				{
+					"costumeName": "ball-d",
+					"baseLayerID": -1,
+					"baseLayerMD5": "5d494659deae5c0de06b5885f5524276.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 22,
+					"rotationCenterY": 22
+				},
+				{
+					"costumeName": "ball-e",
+					"baseLayerID": -1,
+					"baseLayerMD5": "e80c98bc62fd32e8df81642af11ffb1a.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 22,
+					"rotationCenterY": 22
+				}],
+			"currentCostumeIndex": 1,
+			"scratchX": 26.903658834723455,
+			"scratchY": 164.97645960632025,
+			"scale": 1,
+			"direction": -86.46436172370068,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 2,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Balloon3",
+			"scripts": [[52,
+					9,
+					[["whenGreenFlag"],
+						["setVar:to:", "zbite", 0],
+						["show"],
+						["doForever",
+							[["doIf",
+									["touching:", "jojeczko"],
+									[["changeVar:by:", "zbite", 1], ["hide"], ["wait:elapsed:from:", 3], ["show"]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "balloon1-a",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bc96a1fb5fe794377acd44807e421ce2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 32,
+					"rotationCenterY": 94
+				},
+				{
+					"costumeName": "balloon1-b",
+					"baseLayerID": -1,
+					"baseLayerMD5": "d7bb51d9c38af6314bd2b4058d2a592d.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 31,
+					"rotationCenterY": 94
+				},
+				{
+					"costumeName": "kostium1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "3b168eae27d591c0a4787f816ea746d7.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 56,
+					"rotationCenterY": 138
+				},
+				{
+					"costumeName": "balloon1-c",
+					"baseLayerID": -1,
+					"baseLayerMD5": "5538d7fe6f91a40cb7528d4eed415590.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 40,
+					"rotationCenterY": 74
+				}],
+			"currentCostumeIndex": 3,
+			"scratchX": 204,
+			"scratchY": 121,
+			"scale": 0.35000000000000014,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 8,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"listName": "1000",
+			"contents": ["", ""],
+			"isPersistent": false,
+			"x": 231,
+			"y": 333,
+			"width": 116,
+			"height": 216,
+			"visible": false
+		},
+		{
+			"target": "Stage",
+			"cmd": "getVar:",
+			"param": "zbite",
+			"color": 15629590,
+			"label": "zbite",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 370,
+			"y": 1,
+			"visible": true
+		}],
+	"info": {
+		"projectID": "100000075",
+		"flashVersion": "WIN 21,0,0,216",
+		"videoOn": false,
+		"scriptCount": 12,
+		"swfVersion": "v445.2",
+		"spriteCount": 12,
+		"userAgent": "Mozilla\/5.0 (Windows NT 6.1; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/49.0.2623.112 Safari\/537.36",
+		"hasCloudData": false
+	}
+}

@@ -1,0 +1,301 @@
+{
+	"objName": "Stage",
+	"variables": [{
+			"name": "score",
+			"value": 0,
+			"isPersistent": false
+		}],
+	"sounds": [{
+			"soundName": "pop",
+			"soundID": -1,
+			"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+			"sampleCount": 258,
+			"rate": 11025,
+			"format": ""
+		}],
+	"costumes": [{
+			"costumeName": "backdrop1",
+			"baseLayerID": -1,
+			"baseLayerMD5": "739b5e2a2435f6e1ec2993791b423146.png",
+			"bitmapResolution": 1,
+			"rotationCenterX": 240,
+			"rotationCenterY": 180
+		}],
+	"currentCostumeIndex": 0,
+	"penLayerMD5": "5c81a336fab8be57adc039a8a2b33ca9.png",
+	"penLayerID": -1,
+	"tempoBPM": 60,
+	"videoAlpha": 0.5,
+	"children": [{
+			"objName": "Bear2",
+			"scripts": [[65,
+					167,
+					[["whenGreenFlag"],
+						["doForever",
+							[["wait:elapsed:from:", ["randomFrom:to:", 1, 10]], ["show"], ["wait:elapsed:from:", 1], ["hide"]]]]],
+				[38,
+					373,
+					[["whenGreenFlag"],
+						["doForever",
+							[["gotoSpriteOrMouse:", "Cake"],
+								["wait:elapsed:from:", ["randomFrom:to:", 1, 10]],
+								["forward:", ["randomFrom:to:", -100, 100]],
+								["hide"],
+								["wait:elapsed:from:", 1],
+								["show"]]]]],
+				[55, 47, [["whenClicked"], ["playSound:", "meow"], ["say:duration:elapsed:from:", "Hello!", 2]]],
+				[276, 63, [["whenGreenFlag"], ["setVar:to:", "score", 0], ["doForever", null]]]],
+			"sounds": [{
+					"soundName": "meow",
+					"soundID": -1,
+					"md5": "83c36d806dc92327b9e7049a565c6bff.wav",
+					"sampleCount": 18688,
+					"rate": 22050,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "bear2-a",
+					"baseLayerID": -1,
+					"baseLayerMD5": "3eb8e16a983ff23c418374389c81bd30.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 37,
+					"rotationCenterY": 42
+				},
+				{
+					"costumeName": "bear2-b",
+					"baseLayerID": -1,
+					"baseLayerMD5": "12bb6960ac01b65ae9b5e5e7f79700ac.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 51,
+					"rotationCenterY": 42
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 168,
+			"scratchY": 121,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 2,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Apple",
+			"scripts": [[221, 69, [["whenClicked"], ["playSound:", "pop"], ["say:duration:elapsed:from:", "Hello!", 2]]],
+				[33,
+					180,
+					[["whenGreenFlag"],
+						["doForever",
+							[["wait:elapsed:from:", ["randomFrom:to:", 1, 10]], ["show"], ["wait:elapsed:from:", 1], ["hide"]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "apple",
+					"baseLayerID": -1,
+					"baseLayerMD5": "831ccd4741a7a56d85f6698a21f4ca69.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 31,
+					"rotationCenterY": 31
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 88,
+			"scratchY": 12,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 3,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"target": "Stage",
+			"cmd": "getVar:",
+			"param": "score",
+			"color": 15629590,
+			"label": "score",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 5,
+			"y": 5,
+			"visible": true
+		},
+		{
+			"objName": "Microphone",
+			"scripts": [[50, 163, [["whenGreenFlag"], ["show"], ["hide"]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "microphone",
+					"baseLayerID": -1,
+					"baseLayerMD5": "c7a4d18ce227518064e89a4904b7918e.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 13,
+					"rotationCenterY": 29
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -200,
+			"scratchY": 101,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 6,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Cake",
+			"costumes": [{
+					"costumeName": "cake-a",
+					"baseLayerID": -1,
+					"baseLayerMD5": "97ab3596dc06510e963fa29795e663bf.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 64,
+					"rotationCenterY": 50
+				},
+				{
+					"costumeName": "cake-b",
+					"baseLayerID": -1,
+					"baseLayerMD5": "61d5481955a2f42cb843d09506f6744e.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 64,
+					"rotationCenterY": 42
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 168,
+			"scratchY": 121,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 5,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Cheesy-Puffs",
+			"scripts": [[110, 96, [["whenGreenFlag"], ["comeToFront"]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "cheesy-puffs",
+					"baseLayerID": -1,
+					"baseLayerMD5": "4c99a77ba72abaf6c961e8684f8a8a9f.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 87,
+					"rotationCenterY": 72
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -131,
+			"scratchY": -137,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 4,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Dog2",
+			"scripts": [[228, 132, [["whenClicked"], ["playSound:", "dog1"], ["say:duration:elapsed:from:", "Hello!", 2]]],
+				[34,
+					23,
+					[["whenGreenFlag"], ["setVar:to:", "score", 0], ["doForever", [["gotoSpriteOrMouse:", "Cheesy-Puffs"]]]]],
+				[5,
+					179,
+					[["whenGreenFlag"],
+						["doForever",
+							[["gotoSpriteOrMouse:", "Cake"],
+								["wait:elapsed:from:", ["randomFrom:to:", 1, 10]],
+								["forward:", ["randomFrom:to:", -100, 100]],
+								["hide"],
+								["wait:elapsed:from:", 1],
+								["show"]]]]],
+				[25,
+					442,
+					[["whenClicked"],
+						["changeVar:by:", "score", 1],
+						["gotoX:y:", ["randomFrom:to:", -240, 240], ["randomFrom:to:", -180, 180]]]]],
+			"sounds": [{
+					"soundName": "dog1",
+					"soundID": -1,
+					"md5": "b15adefc3c12f758b6dc6a045362532f.wav",
+					"sampleCount": 3672,
+					"rate": 22050,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "dog2-a",
+					"baseLayerID": -1,
+					"baseLayerMD5": "e921f865b19b27cd99e16a341dbf09c2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 75,
+					"rotationCenterY": 75
+				},
+				{
+					"costumeName": "dog2-b",
+					"baseLayerID": -1,
+					"baseLayerMD5": "891f2fb7daf79ba8b224a9173eeb0a63.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 75,
+					"rotationCenterY": 75
+				},
+				{
+					"costumeName": "dog2-c",
+					"baseLayerID": -1,
+					"baseLayerMD5": "cd236d5eef4431dea82983ac9eec406b.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 75,
+					"rotationCenterY": 75
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -131,
+			"scratchY": -137,
+			"scale": 0.75,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 1,
+			"visible": true,
+			"spriteInfo": {
+			}
+		}],
+	"info": {
+		"swfVersion": "v444",
+		"userAgent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit\/600.8.9 (KHTML, like Gecko) Version\/6.2.8 Safari\/537.85.17",
+		"projectID": "100000016",
+		"scriptCount": 12,
+		"flashVersion": "MAC 20,0,0,306",
+		"spriteCount": 6,
+		"hasCloudData": false,
+		"videoOn": false
+	}
+}

@@ -1,0 +1,123 @@
+{
+	"objName": "Stage",
+	"sounds": [{
+			"soundName": "pop",
+			"soundID": -1,
+			"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+			"sampleCount": 258,
+			"rate": 11025,
+			"format": ""
+		}],
+	"costumes": [{
+			"costumeName": "backdrop1",
+			"baseLayerID": -1,
+			"baseLayerMD5": "b61b1077b0ea1931abee9dbbfa7903ff.png",
+			"bitmapResolution": 2,
+			"rotationCenterX": 480,
+			"rotationCenterY": 360
+		},
+		{
+			"costumeName": "blue sky",
+			"baseLayerID": -1,
+			"baseLayerMD5": "32c395c60534db0e100c962cdbb1d7a7.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 245,
+			"rotationCenterY": 183
+		}],
+	"currentCostumeIndex": 1,
+	"penLayerMD5": "5c81a336fab8be57adc039a8a2b33ca9.png",
+	"penLayerID": -1,
+	"tempoBPM": 60,
+	"videoAlpha": 0.5,
+	"children": [{
+			"objName": "super mushroom",
+			"scripts": [[136,
+					101,
+					[["whenGreenFlag"],
+						["show"],
+						["doForever", [["doIf", ["touching:", "Mario"], [["wait:elapsed:from:", 0.01], ["hide"]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "super mushroom.fw",
+					"baseLayerID": -1,
+					"baseLayerMD5": "ef202bbb6da6d85bb21304717b611da5.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 98,
+					"rotationCenterY": 94
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 83,
+			"scratchY": -131,
+			"scale": 0.30000000000000016,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 2,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Mario",
+			"scripts": [[64,
+					124,
+					[["whenGreenFlag"],
+						["gotoX:y:", -210, -124],
+						["doForever",
+							[["doIf", ["keyPressed:", "right arrow"], [["heading:", 90], ["forward:", 5]]],
+								["doIf", ["keyPressed:", "left arrow"], [["heading:", -90], ["forward:", 5]]]]]]],
+				[490,
+					82,
+					[["whenGreenFlag"],
+						["setSizeTo:", 20],
+						["show"],
+						["doForever",
+							[["doIf",
+									["touching:", "super mushroom"],
+									[["doRepeat", 3, [["changeSizeBy:", 5], ["wait:elapsed:from:", 0.1], ["changeYposBy:", 7]]]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "Mario",
+					"baseLayerID": -1,
+					"baseLayerMD5": "7b3c8c94af200609c8b76da334f8f697.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 240,
+					"rotationCenterY": 320
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -195,
+			"scratchY": -124,
+			"scale": 0.2,
+			"direction": 90,
+			"rotationStyle": "leftRight",
+			"isDraggable": false,
+			"indexInLibrary": 1,
+			"visible": true,
+			"spriteInfo": {
+			}
+		}],
+	"info": {
+		"flashVersion": "WIN 20,0,0,306",
+		"userAgent": "Mozilla\/5.0 (Windows NT 6.1; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/48.0.2564.109 Safari\/537.36",
+		"scriptCount": 3,
+		"hasCloudData": false,
+		"swfVersion": "v444",
+		"spriteCount": 2,
+		"videoOn": false,
+		"projectID": "100000012"
+	}
+}

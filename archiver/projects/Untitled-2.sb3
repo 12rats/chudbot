@@ -1,0 +1,134 @@
+{
+	"objName": "Stage",
+	"sounds": [{
+			"soundName": "pop",
+			"soundID": -1,
+			"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+			"sampleCount": 258,
+			"rate": 11025,
+			"format": ""
+		}],
+	"costumes": [{
+			"costumeName": "배경1",
+			"baseLayerID": -1,
+			"baseLayerMD5": "37ef2bc3e0047c9a38b3a91da58321d8.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 240,
+			"rotationCenterY": 180
+		}],
+	"currentCostumeIndex": 0,
+	"penLayerMD5": "5c81a336fab8be57adc039a8a2b33ca9.png",
+	"penLayerID": -1,
+	"tempoBPM": 60,
+	"videoAlpha": 0.5,
+	"children": [{
+			"objName": "Fish1",
+			"scripts": [[33,
+					48,
+					[["whenGreenFlag"],
+						["show"],
+						["gotoX:y:", -190, -120],
+						["heading:", 90],
+						["doForever",
+							[["forward:", 10],
+								["nextCostume"],
+								["wait:elapsed:from:", 0.2],
+								["doIf", ["touching:", "_edge_"], [["bounceOffEdge"], ["setRotationStyle", "left-right"]]],
+								["doIf", ["touching:", "Shark"], [["wait:elapsed:from:", 2], ["hide"]]],
+								["doIf", ["keyPressed:", "space"], [["gotoX:y:", -190, -120], ["show"]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "fish1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "df78f8195f72372846d96dc70cb0ad95.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 75,
+					"rotationCenterY": 75
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -71,
+			"scratchY": -120,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "leftRight",
+			"isDraggable": false,
+			"indexInLibrary": 1,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Shark",
+			"scripts": [[105,
+					54,
+					[["whenGreenFlag"],
+						["heading:", -90],
+						["gotoX:y:", 190, -120],
+						["doForever",
+							[["forward:", 10],
+								["nextCostume"],
+								["wait:elapsed:from:", 0.2],
+								["doIf", ["touching:", "_edge_"], [["bounceOffEdge"], ["setRotationStyle", "left-right"]]],
+								["doIf", ["touching:", "Fish1"], [["say:duration:elapsed:from:", "미안해", 2]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "shark-a ",
+					"baseLayerID": -1,
+					"baseLayerMD5": "7c0a907eae79462f69f8e2af8e7df828.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 75,
+					"rotationCenterY": 75
+				},
+				{
+					"costumeName": "shark-b ",
+					"baseLayerID": -1,
+					"baseLayerMD5": "cff9ae87a93294693a0650b38a7a33d2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 75,
+					"rotationCenterY": 75
+				},
+				{
+					"costumeName": "shark-c ",
+					"baseLayerID": -1,
+					"baseLayerMD5": "afeae3f998598424f7c50918507f6ce6.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 77,
+					"rotationCenterY": 37
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 64,
+			"scratchY": -120,
+			"scale": 1,
+			"direction": -90,
+			"rotationStyle": "leftRight",
+			"isDraggable": false,
+			"indexInLibrary": 2,
+			"visible": true,
+			"spriteInfo": {
+			}
+		}],
+	"info": {
+		"videoOn": false,
+		"userAgent": "Mozilla\/5.0 (Windows NT 6.1; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/48.0.2564.116 Safari\/537.36",
+		"scriptCount": 2,
+		"hasCloudData": false,
+		"spriteCount": 2,
+		"swfVersion": "v444",
+		"projectID": "100000010",
+		"flashVersion": "WIN 20,0,0,306"
+	}
+}

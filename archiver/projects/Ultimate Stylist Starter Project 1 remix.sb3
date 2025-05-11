@@ -1,0 +1,625 @@
+{
+	"objName": "Stage",
+	"scripts": [[50, 111, [["whenGreenFlag"], ["doPlaySoundAndWait", "dance celebrate"]]]],
+	"sounds": [{
+			"soundName": "pop",
+			"soundID": -1,
+			"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+			"sampleCount": 258,
+			"rate": 11025,
+			"format": ""
+		},
+		{
+			"soundName": "dance celebrate",
+			"soundID": -1,
+			"md5": "0edb8fb88af19e6e17d0f8cf64c1d136.wav",
+			"sampleCount": 176401,
+			"rate": 22050,
+			"format": "adpcm"
+		}],
+	"costumes": [{
+			"costumeName": "hawaiianshirt",
+			"baseLayerID": -1,
+			"baseLayerMD5": "28f2da40c2a8d1fec3674c830df7a3e4.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 303,
+			"rotationCenterY": 398
+		},
+		{
+			"costumeName": "purpleshirt",
+			"baseLayerID": -1,
+			"baseLayerMD5": "237ab3932c1936050836916516fc783a.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 304,
+			"rotationCenterY": 399
+		},
+		{
+			"costumeName": "redshirt",
+			"baseLayerID": -1,
+			"baseLayerMD5": "6fad13babe5370f7456f57056eba81c0.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 306,
+			"rotationCenterY": 396
+		},
+		{
+			"costumeName": "pinkshirt",
+			"baseLayerID": -1,
+			"baseLayerMD5": "7c29e0002b69749774bbed6d6ec63bb8.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 250,
+			"rotationCenterY": 250
+		},
+		{
+			"costumeName": "purpledress",
+			"baseLayerID": -1,
+			"baseLayerMD5": "460baf05cced32009116213d585561b8.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 306,
+			"rotationCenterY": 396
+		},
+		{
+			"costumeName": "lightblueshirt",
+			"baseLayerID": -1,
+			"baseLayerMD5": "c583e2b4d2a3fa1e9e9028043eeb94e4.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 240,
+			"rotationCenterY": 180
+		},
+		{
+			"costumeName": "yellowdress",
+			"baseLayerID": -1,
+			"baseLayerMD5": "dae847134adcebe4c7881caf712c665a.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 240,
+			"rotationCenterY": 180
+		},
+		{
+			"costumeName": "greyshirt",
+			"baseLayerID": -1,
+			"baseLayerMD5": "0fa478acd875f6d08fc33dd9dfa18e86.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 240,
+			"rotationCenterY": 180
+		}],
+	"currentCostumeIndex": 0,
+	"penLayerMD5": "5c81a336fab8be57adc039a8a2b33ca9.png",
+	"penLayerID": -1,
+	"tempoBPM": 60,
+	"videoAlpha": 0.5,
+	"children": [{
+			"objName": "accessory",
+			"scripts": [[51, 5, [["whenGreenFlag"], ["clearPenTrails"], ["doForever", [["gotoSpriteOrMouse:", "_mouse_"]]]]],
+				[47, 166, [["whenKeyPressed", "space"], ["stampCostume"]]],
+				[37, 269, [["whenKeyPressed", "right arrow"], ["nextCostume"]]],
+				[39, 338, [["whenKeyPressed", "left arrow"], ["changeGraphicEffect:by:", "color", 25]]],
+				[271, 14, [["whenKeyPressed", "up arrow"], ["changeSizeBy:", 10]]],
+				[279, 92, [["whenKeyPressed", "down arrow"], ["changeSizeBy:", -10]]],
+				[284, 173, [["whenKeyPressed", "a"], ["turnRight:", 15]]],
+				[292, 254, [["whenKeyPressed", "b"], ["turnLeft:", 15]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": -1,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "mic",
+					"baseLayerID": -1,
+					"baseLayerMD5": "27ce3756d86d9846077317bfe76fb062.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 69,
+					"rotationCenterY": 271
+				},
+				{
+					"costumeName": "bow",
+					"baseLayerID": -1,
+					"baseLayerMD5": "a9c12923eaf0e558451cca944bcbc7eb.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 189,
+					"rotationCenterY": 82
+				},
+				{
+					"costumeName": "rubberducky",
+					"baseLayerID": -1,
+					"baseLayerMD5": "6669295717001fd3a32419a61bca77dc.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 69,
+					"rotationCenterY": 278
+				},
+				{
+					"costumeName": "pirate",
+					"baseLayerID": -1,
+					"baseLayerMD5": "bef6866b9f61e5fa9eb07c47e647b341.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 54,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "flowers",
+					"baseLayerID": -1,
+					"baseLayerMD5": "22e44608d2291435ebd29c4475d20b49.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 248,
+					"rotationCenterY": 212
+				},
+				{
+					"costumeName": "moustache",
+					"baseLayerID": -1,
+					"baseLayerMD5": "f46fc6e4050dbdbfbd5bfdb12a32030f.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 249,
+					"rotationCenterY": 146
+				},
+				{
+					"costumeName": "present",
+					"baseLayerID": -1,
+					"baseLayerMD5": "ff2b908623479eb2834ac0baea667e3b.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 94,
+					"rotationCenterY": 272
+				},
+				{
+					"costumeName": "leaf crown",
+					"baseLayerID": -1,
+					"baseLayerMD5": "e4df08f2dbbc6d7934df66df91200e78.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 247,
+					"rotationCenterY": 335
+				},
+				{
+					"costumeName": "paintbrush",
+					"baseLayerID": -1,
+					"baseLayerMD5": "884539f0a34240095a0c626bd3f1e45c.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 72,
+					"rotationCenterY": 307
+				},
+				{
+					"costumeName": "pearls",
+					"baseLayerID": -1,
+					"baseLayerMD5": "dd0498bab416355ab5c77eb7e4ea0dc6.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 247,
+					"rotationCenterY": 240
+				},
+				{
+					"costumeName": "mask",
+					"baseLayerID": -1,
+					"baseLayerMD5": "17e600f8eca7224864b2c2834eb07022.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 245,
+					"rotationCenterY": 71
+				},
+				{
+					"costumeName": "key",
+					"baseLayerID": -1,
+					"baseLayerMD5": "8dafd58b29df80702c8c1991290fb5b1.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 112,
+					"rotationCenterY": 318
+				},
+				{
+					"costumeName": "hat",
+					"baseLayerID": -1,
+					"baseLayerMD5": "e3b6befb6dcec81c189afa82659fd97e.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 246,
+					"rotationCenterY": 331
+				},
+				{
+					"costumeName": "guitar",
+					"baseLayerID": -1,
+					"baseLayerMD5": "225c55cedbc2ebc99adc5b204ee94617.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 104,
+					"rotationCenterY": 341
+				},
+				{
+					"costumeName": "grad",
+					"baseLayerID": -1,
+					"baseLayerMD5": "826cd729189e008d67dfd2fa13075ac7.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 240,
+					"rotationCenterY": 83
+				},
+				{
+					"costumeName": "gold necklace",
+					"baseLayerID": -1,
+					"baseLayerMD5": "143b3b1b085550d0ea788fa5f9958336.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 250,
+					"rotationCenterY": 335
+				},
+				{
+					"costumeName": "glasses and nose",
+					"baseLayerID": -1,
+					"baseLayerMD5": "afe0b7b4c8917e3462ba46105d240893.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 245,
+					"rotationCenterY": 137
+				},
+				{
+					"costumeName": "football",
+					"baseLayerID": -1,
+					"baseLayerMD5": "dc5feb840d4dceaf845b37a084109871.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 94,
+					"rotationCenterY": 319
+				},
+				{
+					"costumeName": "elfglasses",
+					"baseLayerID": -1,
+					"baseLayerMD5": "be8173bc82e1dd25777249727f18c988.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 246,
+					"rotationCenterY": 114
+				},
+				{
+					"costumeName": "flower",
+					"baseLayerID": -1,
+					"baseLayerMD5": "b06f5daf09b965fce06082e45aece665.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 196,
+					"rotationCenterY": 318
+				},
+				{
+					"costumeName": "cat",
+					"baseLayerID": -1,
+					"baseLayerMD5": "7caa2d919025c8ad01123693255cf5ff.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 241,
+					"rotationCenterY": 134
+				},
+				{
+					"costumeName": "butterfly",
+					"baseLayerID": -1,
+					"baseLayerMD5": "3f1f6fe6890867ea9ee93889686d6c15.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 509,
+					"rotationCenterY": 685
+				},
+				{
+					"costumeName": "cupcake",
+					"baseLayerID": -1,
+					"baseLayerMD5": "148d10f46af0abb701fc5506af3cc6de.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 104,
+					"rotationCenterY": 282
+				},
+				{
+					"costumeName": "Hearts-In-Heart",
+					"baseLayerID": -1,
+					"baseLayerMD5": "f96d41b67ec1fa6dcfad129cab67d70a.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 277,
+					"rotationCenterY": 359
+				},
+				{
+					"costumeName": "beard",
+					"baseLayerID": -1,
+					"baseLayerMD5": "af051ba4a5716edc321990b833bcb8a1.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 253,
+					"rotationCenterY": 214
+				},
+				{
+					"costumeName": "beaker",
+					"baseLayerID": -1,
+					"baseLayerMD5": "0088a0f6bf6be0eb4accf71423ef5b20.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 71,
+					"rotationCenterY": 288
+				},
+				{
+					"costumeName": "basketball",
+					"baseLayerID": -1,
+					"baseLayerMD5": "80daa5f970058fb325264bf99671eb01.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 111,
+					"rotationCenterY": 300
+				},
+				{
+					"costumeName": "yellow glasses",
+					"baseLayerID": -1,
+					"baseLayerMD5": "52598a5dea1daa8784907e52643adc65.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 242,
+					"rotationCenterY": 116
+				},
+				{
+					"costumeName": "3d",
+					"baseLayerID": -1,
+					"baseLayerMD5": "0498b294956ce32dabc0015737d75235.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 237,
+					"rotationCenterY": 115
+				},
+				{
+					"costumeName": "wrench",
+					"baseLayerID": -1,
+					"baseLayerMD5": "9d8655ed308803be383e9205759eaf07.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 306,
+					"rotationCenterY": 596
+				},
+				{
+					"costumeName": "antlers",
+					"baseLayerID": -1,
+					"baseLayerMD5": "367c177f6a2a041fd8cb94c5f8c09c57.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 317,
+					"rotationCenterY": 27
+				},
+				{
+					"costumeName": "sword2",
+					"baseLayerID": -1,
+					"baseLayerMD5": "67b62c538cb87c4e75dc736968ed2fa9.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 448,
+					"rotationCenterY": 566
+				},
+				{
+					"costumeName": "abstract1",
+					"baseLayerID": -1,
+					"baseLayerMD5": "94c9ec48f64eebce0c586ac68d1ac02a.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 300,
+					"rotationCenterY": 302
+				},
+				{
+					"costumeName": "sword",
+					"baseLayerID": -1,
+					"baseLayerMD5": "5eb0470751f0fb0326adb4f517e19c04.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 68,
+					"rotationCenterY": 257
+				},
+				{
+					"costumeName": "swoosh",
+					"baseLayerID": -1,
+					"baseLayerMD5": "aade2eb0dfe0cfb537f80d22bc0ccc26.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 240,
+					"rotationCenterY": 40
+				},
+				{
+					"costumeName": "rubberducky2",
+					"baseLayerID": -1,
+					"baseLayerMD5": "6669295717001fd3a32419a61bca77dc.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 69,
+					"rotationCenterY": 278
+				},
+				{
+					"costumeName": "rose",
+					"baseLayerID": -1,
+					"baseLayerMD5": "fa12d0857ebdc71b57702e25e3b9793b.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 79,
+					"rotationCenterY": 287
+				},
+				{
+					"costumeName": "red ball",
+					"baseLayerID": -1,
+					"baseLayerMD5": "9801ff92bf0f4282eef1d923f885145d.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 251,
+					"rotationCenterY": 98
+				},
+				{
+					"costumeName": "purse",
+					"baseLayerID": -1,
+					"baseLayerMD5": "e70b241d5d881c895990ebc521e210fa.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 48,
+					"rotationCenterY": 53
+				},
+				{
+					"costumeName": "sleeping cap",
+					"baseLayerID": -1,
+					"baseLayerMD5": "286b4eb8152fa6f82fc703d276c9d7ed.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 55,
+					"rotationCenterY": 45
+				},
+				{
+					"costumeName": "patch",
+					"baseLayerID": -1,
+					"baseLayerMD5": "a0b4649efb0cce3f1bf83534fd2434f2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 59,
+					"rotationCenterY": 23
+				},
+				{
+					"costumeName": "noogle hat",
+					"baseLayerID": -1,
+					"baseLayerMD5": "a067c2ad3255528c5b4f6356d1836e04.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 37,
+					"rotationCenterY": 30
+				},
+				{
+					"costumeName": "party hat",
+					"baseLayerID": -1,
+					"baseLayerMD5": "07adc88091233836c68a19881204a472.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 26,
+					"rotationCenterY": 45
+				},
+				{
+					"costumeName": "scarf 2",
+					"baseLayerID": -1,
+					"baseLayerMD5": "2a264443e1b2f04d8bcfcffb186a7b3b.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 41,
+					"rotationCenterY": 14
+				},
+				{
+					"costumeName": "short necklace",
+					"baseLayerID": -1,
+					"baseLayerMD5": "153c35b68de726bf94a9eb3bc3a4caf7.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 36,
+					"rotationCenterY": 18
+				},
+				{
+					"costumeName": "orangescarf_body",
+					"baseLayerID": -1,
+					"baseLayerMD5": "15190beea7107f4fc9869cdda742726f.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 55,
+					"rotationCenterY": 25
+				},
+				{
+					"costumeName": "monocle",
+					"baseLayerID": -1,
+					"baseLayerMD5": "1b18cbc6c47c1358a04e4747102619c0.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 16,
+					"rotationCenterY": 13
+				},
+				{
+					"costumeName": "headphones",
+					"baseLayerID": -1,
+					"baseLayerMD5": "d7dfc347631113e8c3ba6d4930994f70.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 59,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "green",
+					"baseLayerID": -1,
+					"baseLayerMD5": "86306354fc44691dd40ff630c3b99ffb.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 22,
+					"rotationCenterY": 4
+				},
+				{
+					"costumeName": "goprohelmet_head",
+					"baseLayerID": -1,
+					"baseLayerMD5": "d68d7154b48146111a5592650acecb1e.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 59,
+					"rotationCenterY": 18
+				},
+				{
+					"costumeName": "mask2",
+					"baseLayerID": -1,
+					"baseLayerMD5": "b4825a9a2298e653b6c7e525ac76d3b4.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 56,
+					"rotationCenterY": 41
+				},
+				{
+					"costumeName": "heart necklace",
+					"baseLayerID": -1,
+					"baseLayerMD5": "276f9018b5ea23dee7ffeb4f909b96fa.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 32,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "goggles",
+					"baseLayerID": -1,
+					"baseLayerMD5": "8b58f9553c8c833f29fe5c5de2801d90.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 45,
+					"rotationCenterY": 16
+				},
+				{
+					"costumeName": "glasses 4",
+					"baseLayerID": -1,
+					"baseLayerMD5": "1e0c155d60e6d73e227201eefd2238d2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 54,
+					"rotationCenterY": 17
+				},
+				{
+					"costumeName": "dogv2_face",
+					"baseLayerID": -1,
+					"baseLayerMD5": "507a51e02054028f1a0e4668b26c87e9.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 59,
+					"rotationCenterY": 3
+				},
+				{
+					"costumeName": "crown_head",
+					"baseLayerID": -1,
+					"baseLayerMD5": "7d7db91a1b4166b8245940cc27cdbfd3.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 69,
+					"rotationCenterY": 84
+				},
+				{
+					"costumeName": "bracelet",
+					"baseLayerID": -1,
+					"baseLayerMD5": "4ae25bfd7fc61e571937ee06ff649b72.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 30,
+					"rotationCenterY": 18
+				},
+				{
+					"costumeName": "beard03",
+					"baseLayerID": -1,
+					"baseLayerMD5": "87243d0a5d533d7834e8c51b2fb77d7b.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 31,
+					"rotationCenterY": 26
+				},
+				{
+					"costumeName": "beard2",
+					"baseLayerID": -1,
+					"baseLayerMD5": "3d2f20038c7a78cb793342061f37dbc7.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 57,
+					"rotationCenterY": 18
+				},
+				{
+					"costumeName": "baby",
+					"baseLayerID": -1,
+					"baseLayerMD5": "908fbc59fe4405cf03491fa52aeb5e32.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 104,
+					"rotationCenterY": 60
+				},
+				{
+					"costumeName": "slr_body",
+					"baseLayerID": -1,
+					"baseLayerMD5": "9c8dd56fd17ef43f5690fdb2d7a8f4e6.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 42,
+					"rotationCenterY": 47
+				},
+				{
+					"costumeName": "snorkel",
+					"baseLayerID": -1,
+					"baseLayerMD5": "9224cabd9436dae97c9380a05490aed8.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 3,
+					"rotationCenterY": 42
+				}],
+			"currentCostumeIndex": 10,
+			"scratchX": 215,
+			"scratchY": 180,
+			"scale": 0.5,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 1,
+			"visible": true,
+			"spriteInfo": {
+			}
+		}],
+	"info": {
+		"userAgent": "Mozilla\/5.0 (Windows NT 6.1) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/48.0.2564.116 Safari\/537.36",
+		"projectID": "100000071",
+		"flashVersion": "WIN 20,0,0,306",
+		"swfVersion": "v444",
+		"scriptCount": 9,
+		"hasCloudData": false,
+		"spriteCount": 1,
+		"videoOn": false
+	}
+}
