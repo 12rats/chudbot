@@ -4,7 +4,7 @@
 
 ---
 
-Studiobot is a very heavy **WIP**. It does **NOT** work to a functional degree, Only making cosmetic changes
+Studiobot is a very heavy **WIP**. It does **NOT** work to a functional degree, Only making cosmetic changes to bot profiles.
 
 Archiver on the other hand, Is fully functional, alongside having discord rich presence.
 
